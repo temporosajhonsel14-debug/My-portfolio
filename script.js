@@ -1,17 +1,17 @@
-// Select the menu icon and navigation links container
-const menuIcon = document.querySelector('#menu');
-const navbar = document.querySelector('.link');
+const menu = document.querySelector("#menu");
+const nav = document.querySelector(".link");
+const navLinks = document.querySelectorAll(".link a");
 
-// Toggle navigation menu on menu icon click
-menuIcon.addEventListener('click', () => {
-  navbar.classList.toggle('active');
-  menuIcon.classList.toggle('bx-x'); // Changes the icon to an 'X' when menu is open
-});
+// Toggle navigation dropdown on menu icon click
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    nav.classList.toggle('active');
+};
 
-// Close the mobile menu when clicking any nav link
-document.querySelectorAll('.link a').forEach(link => {
-  link.addEventListener('click', () => {
-    navbar.classList.remove('active');
-    menuIcon.classList.remove('bx-x');
-  });
+// Close navigation menu when clicking a navigation link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('bx-x');
+        nav.classList.remove('active');
+    });
 });

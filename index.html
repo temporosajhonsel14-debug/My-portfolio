@@ -21,11 +21,12 @@
 
     <i class="bx bx-menu-right" id="menu"></i>
 
-    <a href="#contact" class="btn">Contact me</a>
+    <a href="#contact" class="btn nav-btn">Contact me</a>
   </nav>
 
+  <!-- Home section -->
   <section id="home">
-    <img src="mypic.jpg" alt="Profile Picture">
+    <img src="mypic.jpg" alt="">
 
     <div class="info-box">
       <div>
@@ -45,6 +46,7 @@
     </div>
   </section>
 
+  <!-- About me -->
   <section id="about">
     <div class="about-box">
 
@@ -71,30 +73,92 @@
 
     </div>
 
-    <img src="mypic.jpg" alt="Profile Picture">
+    <img src="mypic.jpg" alt="">
   </section>
 
-  <script>
-    // Toggle mobile menu on click
-    const menuIcon = document.querySelector('#menu');
-    const navLinks = document.querySelector('.link');
+ <!-- Achievement Section -->
+<section id="achievement">
+  <h1 class="header"><span>Achievement</span></h1>
 
-    if (menuIcon && navLinks) {
-      menuIcon.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuIcon.classList.toggle('bx-x'); // Swaps icon to 'X' when open
-      });
+  <div class="achievement-container">
+    <div class="box">
+      <div class="img-box">
+        <img src="dlc.jpg" alt="">
+      </div>
+      <h1><span>Part of SJNHS DLC</span></h1>
+      <p>My grade 11 days</p>
+    </div>
 
-      // Close menu when clicking any link
-      document.querySelectorAll('.link a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          menuIcon.classList.remove('bx-x');
-        });
-      });
-    }
-  </script>
+    <div class="box">
+      <div class="img-box">
+        <img src="ella.jpg" alt="">
+      </div>
+      <h1><span>Graduate at SJNHS</span></h1>
+      <p>My SJNHS life</p>
+    </div>
+  </div>
+</section>
 
-  <img src="" alt="">
+  <!-- Contact section -->
+  <section id="contact">
+
+    <h1 class="header"><span>Contact</span></h1>
+
+    <form action="#">
+      <div class="input-box">
+        <span>Full Name</span>
+        <input type="text" placeholder="Enter Your Full Name">
+      </div>
+      
+      <div class="input-box">
+        <span>Your Email</span>
+        <input type="email" placeholder="Enter Your Email">
+      </div>
+
+      <div class="input-box">
+        <span>Your Message</span>
+        <textarea rows="4" placeholder="Enter Your Message"></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="col-left">
+        <div class="col-box">
+            <a href="https://maps.google.com/?q=San+Jose+Oco,+Viga,+Catanduanes" target="_blank" rel="noopener noreferrer" class="location-link">
+              <i class="bx bx-map"></i>
+              <span>San Jose Oco, Viga, Catanduanes</span>
+            </a>
+        </div>
+
+        <div class="col-box">
+            <i class="bx bx-phone"></i>
+            <span>09302618684</span>
+        </div>
+
+        <div class="col-box">
+            <i class="bx bx-envelope"></i>
+            <span>temporosajhonsel14@gmail.com</span>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="col-right">
+        <span>About My journey to College</span>
+        <p>hatdog</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
