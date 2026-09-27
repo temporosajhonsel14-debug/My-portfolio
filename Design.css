@@ -504,3 +504,66 @@ footer {
         align-items: flex-start;
     }
 }
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   ========================================== */
+@media (max-width: 950px) {
+    /* Hide the desktop contact button */
+    nav .nav-btn {
+        display: none;
+    }
+
+    /* Force the Menu Button to appear on phones/tablets */
+    .menu-btn {
+        display: flex !important;
+        align-items: center;
+        gap: 0.4em;
+        padding: 0.4em 0.8em;
+        background: transparent;
+        border: 2px solid #5272ff;
+        border-radius: 0.5em;
+        cursor: pointer;
+    }
+
+    /* Style the text inside the button */
+    .menu-btn span {
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+    }
+
+    /* Force the Menu Icon to show on mobile screens */
+    .menu-btn i {
+        display: inline-block !important;
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    /* Dropdown navigation menu drawer */
+    nav .link {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5em;
+        background-color: rgba(24, 24, 24, 0.98);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+    }
+
+    /* When activated by JS clicking the menu button */
+    nav .link.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
