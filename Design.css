@@ -80,18 +80,43 @@ nav ul a:hover {
     color: var(--background);
 }
 
+/* Hide menu button on desktop screens */
+.menu-btn {
+    display: none;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.4em 0.8em;
+    background: transparent;
+    border: 2px solid #5272ff;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-btn span {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+}
+
+.menu-btn i {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.menu-btn:hover {
+    background: linear-gradient(to right, #5272ff, #f23eff);
+    border-color: transparent;
+}
+
 span {
     background: linear-gradient(to right, #5272ff, #f23eff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-#menu {
-    color: white;
-    font-size: 2.5em;
-    display: none;
-    cursor: pointer;
 }
 
 section {
@@ -151,16 +176,6 @@ section {
 .btn-box .btn:nth-of-type(2):hover {
     background-color: transparent;
     color: white;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #5272ff, #f23eff);
-    border-radius: 5px;
 }
 
 #about {
@@ -228,11 +243,16 @@ section {
     background-color: var(--background);
 }
 
+.header {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+}
+
 .achievement-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
-    justify-content: center;
 }
 
 .box {
@@ -254,13 +274,12 @@ section {
     border-color: #5272ff;
 }
 
-/* Image container wrapper */
 .box .img-box {
     width: 100%;
-    height: 250px; /* Adjust height if you want more room for the image */
+    height: 250px;
     border-radius: 0.5em;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.3); /* Optional: fills empty space around uncropped photos */
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,10 +288,20 @@ section {
 .box img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Displays the ENTIRE image without cropping any content */
+    object-fit: contain;
     object-position: center;
     transition: 0.3s ease-in-out;
 }
+
+.box h1 {
+    font-size: 1.5em;
+}
+
+.box p {
+    opacity: 0.8;
+    font-size: 1em;
+}
+
 #contact {
     background-color: var(--second-background);
 }
@@ -396,14 +425,15 @@ footer {
     max-width: 400px;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Mobile & Tablet Devices */
 @media (max-width: 950px) {
     nav .nav-btn {
         display: none;
     }
 
-    #menu {
-        display: block;
+    /* Display the Menu Button with Icon on devices <= 950px */
+    .menu-btn {
+        display: flex;
     }
 
     nav .link {

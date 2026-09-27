@@ -1,17 +1,18 @@
-const menu = document.querySelector("#menu");
+const menuToggleBtn = document.querySelector("#menu-toggle-btn");
+const menuIcon = document.querySelector("#menu-icon");
 const nav = document.querySelector(".link");
 const navLinks = document.querySelectorAll(".link a");
 
-// Toggle navigation dropdown on menu icon click
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
+// Toggle navigation dropdown when clicking the menu button
+menuToggleBtn.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x');
     nav.classList.toggle('active');
-};
+});
 
-// Close navigation menu when clicking a navigation link
+// Close navigation menu automatically when clicking any link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        menu.classList.remove('bx-x');
+        menuIcon.classList.remove('bx-x');
         nav.classList.remove('active');
     });
 });
