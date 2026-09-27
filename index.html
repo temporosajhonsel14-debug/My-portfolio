@@ -74,7 +74,26 @@
     <img src="mypic.jpg" alt="Profile Picture">
   </section>
 
-  <script src="script.js"></script>
+  <script>
+    // Toggle mobile menu on click
+    const menuIcon = document.querySelector('#menu');
+    const navLinks = document.querySelector('.link');
+
+    if (menuIcon && navLinks) {
+      menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuIcon.classList.toggle('bx-x'); // Swaps icon to 'X' when open
+      });
+
+      // Close menu when clicking any link
+      document.querySelectorAll('.link a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          menuIcon.classList.remove('bx-x');
+        });
+      });
+    }
+  </script>
 
   <img src="" alt="">
 </body>

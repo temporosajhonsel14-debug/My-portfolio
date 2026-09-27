@@ -196,3 +196,85 @@ align-items: baseline;
 .about-box h2{
     font-size: 2.5em;
 }
+
+/* ================= RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 1.5em 5%;
+    }
+    section {
+        padding: 8% 5%;
+    }
+    #about {
+        gap: 3em;
+    }
+    .hobbies {
+        gap: 4em;
+    }
+    #home img {
+        width: 25vw;
+    }
+    #about img {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: block;
+    }
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5em 0;
+        background-color: rgba(24, 24, 24, 0.95);
+        flex-direction: column;
+        gap: 1.5em;
+        display: none;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about-box, .about-box {
+        text-align: center;
+        align-items: center;
+    }
+    .hobbies {
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+    #home img {
+        width: 180px;
+    }
+    #about img {
+        width: 70vw;
+    }
+    .info-box h1, .about-box h1 {
+        font-size: 3em;
+    }
+    .info-box h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-box h1, .about-box h1 {
+        font-size: 2.2em;
+    }
+    .btn-box {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-box .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
