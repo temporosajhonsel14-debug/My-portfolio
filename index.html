@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio website</title>
   <link rel="stylesheet" href="Design.css">
-  
-  <!-- Updated Boxicons CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   
   <nav>
-    <a href="#" class="logo"><span>Jhonsel</span></a>
+    <a href="#" class="logo"><span>My Portfolio</span></a>
 
     <ul class="link">
       <li><a href="#home">Home</a></li>
@@ -21,28 +19,23 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- Menu Button with Icon for mobile & tablet devices -->
-    <button id="menu-toggle-btn" class="menu-btn" aria-label="Toggle Navigation">
-      <span>Menu</span>
-      <i class="bx bx-menu-right" id="menu-icon"></i>
-    </button>
+  <button class="menu-btn" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+  <span>Menu</span>
+  <i class="bx bx-menu" id="menu-icon"></i>
+</button>
 
     <a href="#contact" class="btn nav-btn">Contact me</a>
   </nav>
 
   <!-- Home section -->
   <section id="home">
-    <img src="mypic.jpg" alt="Profile Picture">
+    <img src="mypic.jpg" alt="">
 
     <div class="info-box">
       <div>
         <h1><span>Hello, I'm Jhonsel</span></h1>
-        <h3><span>I am a student in Catsu</span> based in Catanduanes</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-           Debitis omnis natus recusandae! Maiores
-           numquam repellat quisquam cum nulla minus minima fuga 
-           impedit ullam distinctio. Vel blanditiis dicta commodi in 
-           cum.</p>
+        <h3><span>I am a student in Catsu</span> <span>Located in Calatagan Virac Catanduanaes</span></h3>
+        <p>Hi I am Jhonsel Temporosa Student of Catanduanes State University.</p>
       </div>
     </div>
     
@@ -58,7 +51,12 @@
 
       <div class="about-info">
         <h1><span>About me</span></h1>
-        <p>About my self</p>
+        <p>I lived in San Jose Oco Viga Ctanduanes 
+          <br>Born on January 27, 2007
+          <br> I am currently taking the course Bachelor of Scienece in Computer Scienece
+
+
+        </p>
       </div>
 
       <h2><span>Hobbies</span></h2>
@@ -79,31 +77,38 @@
 
     </div>
 
-    <img src="mypic.jpg" alt="Profile Picture">
+    <img src="mypic.jpg" alt="">
   </section>
 
-  <!-- Achievement Section -->
-  <section id="achievement">
-    <h1 class="header"><span>Achievement</span></h1>
+ <!-- Achievement Section -->
+<section id="achievement">
+  <h1 class="header"><span>Achievement</span></h1>
 
-    <div class="achievement-container">
-      <div class="box">
-        <div class="img-box">
-          <img src="dlc.jpg" alt="Part of SJNHS DLC">
-        </div>
-        <h1><span>Part of SJNHS DLC</span></h1>
-        <p>My grade 11 days</p>
+  <div class="achievement-container">
+    <div class="box">
+      <div class="img-box">
+        <img src="dlc.jpg" alt="">
       </div>
-
-      <div class="box">
-        <div class="img-box">
-          <img src="ella.jpg" alt="Graduate at SJNHS">
-        </div>
-        <h1><span>Graduate at SJNHS</span></h1>
-        <p>My SJNHS life</p>
-      </div>
+      <h1><span>Part of SJNHS DLC</span></h1>
+      <p>I once a part of our school DLC from garde 10 to grade 12 
+        and the remarkable part in that time is our firts time competition 
+        in Catanduangan Festival we our only one step ahead shorter we only
+         got the firts place in that 
+        compition.
+      </p>
     </div>
-  </section>
+
+    <div class="box">
+      <div class="img-box">
+        <img src="OIP.jpg" alt="">
+      </div>
+      <h1><span>4th place in chess</span></h1>
+      <p> I once compet in our municipal meet in chess that time i was new
+        to the game called chess I don't have enough time to prepare and
+        practice so i only got 4th place </p>
+    </div>
+  </div>
+</section>
 
   <!-- Contact section -->
   <section id="contact">
@@ -150,6 +155,7 @@
             <span>temporosajhonsel14@gmail.com</span>
         </div>
 
+        <!-- Social Media Icons -->
         <div class="social-icons">
           <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
           <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="bx bxl-github"></i></a>
